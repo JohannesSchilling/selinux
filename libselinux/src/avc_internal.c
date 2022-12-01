@@ -90,8 +90,6 @@ int avc_process_policyload(uint32_t seqno)
 		return rc;
 	}
 
-	selinux_flush_class_cache();
-
 	return selinux_netlink_policyload(seqno);
 }
 

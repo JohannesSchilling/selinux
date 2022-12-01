@@ -53,6 +53,7 @@ default_selinux_setenforce(int enforcing __attribute__((unused)))
 static int
 default_selinux_policyload(int seqno __attribute__((unused)))
 {
+	selinux_flush_class_cache();
 	return 0;
 }
 
